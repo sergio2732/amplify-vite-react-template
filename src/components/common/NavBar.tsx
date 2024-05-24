@@ -1,5 +1,6 @@
 import '@aws-amplify/ui-react/styles.css';
 import { Breadcrumbs } from '@aws-amplify/ui-react';
+import "../../styles/NavBar.css";
 
 const breadcrumbs = [
   {
@@ -22,7 +23,7 @@ const breadcrumbs = [
 
 export const NavBar = () => {
   return (
-    <Breadcrumbs.Container
+    <Breadcrumbs.Container id='breadcrumbs-container'
       style={{
         position: 'fixed',
         top: 0,
@@ -35,9 +36,9 @@ export const NavBar = () => {
         <Breadcrumbs.Item key={`${href}${idx}`}>
           <Breadcrumbs.Link
             fontWeight="bold"
-            textDecoration="underline"
+            textDecoration="none"
             fontSize={'1.5rem'}
-            color={'black'}
+            color={'#DCC5A0'}
             href={href}
             isCurrent={isCurrent}
           >

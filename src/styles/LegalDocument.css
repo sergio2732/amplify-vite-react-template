@@ -1,0 +1,10 @@
+.container {
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    padding: 0 20px; /* Opcional: Ajusta el padding para dar espacio a los lados */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+  }
+  
+  .callItems {
+    width: 100%;
+  }
+  
