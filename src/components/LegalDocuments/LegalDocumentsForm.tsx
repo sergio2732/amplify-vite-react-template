@@ -1,7 +1,6 @@
 import { Flex, Input, Label, Alert } from '@aws-amplify/ui-react';
 import React, { useState } from 'react';
 import { ToggleButton } from '@aws-amplify/ui-react';
-import '../../styles/LegalDocumentsForm.css';
 
 export const LegalDocumentsForm = () => {
   const [hasError, setHasError] = React.useState(true);
@@ -14,34 +13,36 @@ export const LegalDocumentsForm = () => {
 
   return (
     <>
-      <div className='containerFlex'>
-        <Flex direction="row" gap="long" className='flex' id='flexId'>
+      <Flex padding={'10px'} direction={"column"} alignItems="center" marginTop="20%" marginBottom="20%">
+        <Flex direction="row" gap="small" width="90%">
           <Label htmlFor="caseId">Case Id:</Label>
           <Input id="caseId" name="caseId" type="number" hasError={hasError} onChange={validateCaseId} />
           <Label htmlFor="Title">Title:</Label>
           <Input id="TitleDocument" name="Title" type="text" />
         </Flex>
-        <Flex direction="row" gap="long" className='flex' id='flexDate'>
+        <Flex direction="row" gap="long" width="90%">
           <Label htmlFor="caseTitle">Case title:</Label>
           <Input id="caseTitle" name="caseTitle" type="text" />
           <Label htmlFor="datePublished">Date published:</Label>
           <Input id="datePublished" name="datePublished" type="date" />
         </Flex>
-        <Flex direction="row" gap="long" className='flex' id='flexAuthor'>
+        <Flex direction="row" gap="long" className='flex' id='flexAuthor' width="90%">
           <Label htmlFor="Author">Author:</Label>
           <Input id="documentAuthor" name="documentAuthor" type="text" />
         </Flex>
-        <Flex direction="row" gap="long" className='flex' id='flexContent'>
+        <Flex direction="row" gap="long" className='flex' id='flexContent' width="90%">
           <Label htmlFor="Content">Content:</Label>
           <Input id="documentContent" name="documentContent" type="text" />
         </Flex>
-        <ToggleButton onClick={() => setIsAlertVisible(!isAlertVisible)}>
-          submit
-        </ToggleButton>
+        <Flex width="100%" justifyContent="center">
+          <ToggleButton onClick={() => setIsAlertVisible(!isAlertVisible)} width="20%">
+            submit
+          </ToggleButton>
+        </Flex>
         {isAlertVisible ? (
           <Alert variation="info" className='alert'>the document was registrated.</Alert>
         ) : null}
-      </div>
+      </Flex>
     </>
   );
 };
