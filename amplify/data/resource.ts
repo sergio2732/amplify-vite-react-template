@@ -12,7 +12,7 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
-  Document: a
+  /*Document: a
     .model({
       caseId: a.float(),
       documentTitle: a.string(),
@@ -21,7 +21,7 @@ const schema = a.schema({
       documentAuthor: a.string(),
       documentContent: a.string(),
     })
-    .authorization((allow) => [allow.publicApiKey()]),
+    .authorization((allow) => [allow.publicApiKey()]),*/
 });
 
 export type Schema = ClientSchema<typeof schema>;
