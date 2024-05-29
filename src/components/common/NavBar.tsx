@@ -5,7 +5,11 @@ import "../../styles/NavBar.css";
 const breadcrumbs = [
   {
     href: '/',
-    text: 'Home',
+    text: 'Landing Page',
+  },
+  {
+    href: '/Home',
+    text: 'Login',
   },
   {
     href: '/example1',
@@ -15,6 +19,7 @@ const breadcrumbs = [
     href: '/legalDocuments',
     text: 'Legal Documents',
   },
+  
   {
     text: '',
     isCurrent: true,      
